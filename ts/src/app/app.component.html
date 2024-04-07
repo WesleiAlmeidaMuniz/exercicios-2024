@@ -1,90 +1,556 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img src="data:image/png;base64,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" alt="" />
-  <span>Seu ambiente de dev para o exercício da chuva está rodando!</span>
-  <div class="spacer"></div>
-</div>
-
-<div class="content" role="main">
-
-  <!-- Highlight Card -->
-  <div class="card highlight-card card-small">
-
-    <svg id="rocket" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
-      <title>Rocket Ship</title>
-      <g id="Group_83" data-name="Group 83" transform="translate(-141 -696)">
-        <circle id="Ellipse_8" data-name="Ellipse 8" cx="50.839" cy="50.839" r="50.839" transform="translate(141 696)" fill="#dd0031"/>
-        <g id="Group_47" data-name="Group 47" transform="translate(165.185 720.185)">
-          <path id="Path_33" data-name="Path 33" d="M3.4,42.615a3.084,3.084,0,0,0,3.553,3.553,21.419,21.419,0,0,0,12.215-6.107L9.511,30.4A21.419,21.419,0,0,0,3.4,42.615Z" transform="translate(0.371 3.363)" fill="#fff"/>
-          <path id="Path_34" data-name="Path 34" d="M53.3,3.221A3.09,3.09,0,0,0,50.081,0,48.227,48.227,0,0,0,18.322,13.437c-6-1.666-14.991-1.221-18.322,7.218A33.892,33.892,0,0,1,9.439,25.1l-.333.666a3.013,3.013,0,0,0,.555,3.553L23.985,43.641a2.9,2.9,0,0,0,3.553.555l.666-.333A33.892,33.892,0,0,1,32.647,53.3c8.55-3.664,8.884-12.326,7.218-18.322A48.227,48.227,0,0,0,53.3,3.221ZM34.424,9.772a6.439,6.439,0,1,1,9.106,9.106,6.368,6.368,0,0,1-9.106,0A6.467,6.467,0,0,1,34.424,9.772Z" transform="translate(0 0.005)" fill="#fff"/>
-        </g>
-      </g>
-    </svg>
-
-    <span>{{ title }} está rodando!</span>
-
-    <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
-      <title>Rocket Ship Smoke</title>
-      <path id="Path_40" data-name="Path 40" d="M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z" transform="translate(-147.025 -140.939)" fill="#f5f5f5"/>
-    </svg>
-
-  </div>
-
-  <!-- Next Steps -->
-  <h2>Próximos passos</h2>
-  <p>O que voce deve fazer agora?</p>
-
-  <input type="hidden" #selection>
-
-  <!-- Terminal -->
-  <div class="terminal">
-    <pre>npx cypress open --env type=base</pre>
-  </div>
-
-  <!-- Resources -->
-  <h2>Informações importantes</h2>
-  <p>Os seguintes elementos devem existir no seu aplicativo renderizado (use o inspect):</p>
-  <div id="required-elements">
-    <h3>O título do trabalho deve ser um h2: </h3>
-    <h2>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP'</h2>
-
-    <h3>O elemento de expandir resumo precisa ter a classe .btn-show-more</h3>
-    <a href="#" class="btn-show-more">ver mais</a>
-
-    <h3>O elemento de criar tópico precisa ter a classe .btn-create-topic</h3>
-    <a href="#" class="btn-create-topic">criar tópico</a>
-
-    <h3>O card que contém um tópico respondido precisa ter a classe .answered-topic, o assunto do tópico deve ter a classe .ops-topic-subject</h3>
-    <div class="answered-topic">
-      <h4 class="ops-topic-subject">Título do tópico</h4>
+<main>
+  <!-- Side Bar -->
+  <div class="d-flex flex-column flex-shrink-0 sidebar">
+    <div class="d-flex p-4 align-items-center justify-content-center mb-3 mb-md-0 text-white sidebar-header">
+      <p class="fs-3">SLACA 2019</p>
     </div>
-    <div class="comments-container">
-      Os comentários de um tópico devem estar encapsulados num elemento com a classe .comments-container
-    </div>
-
-    <form>
-      Assunto:
-      <input class="subject" placeholder="Defina um tópico sucinto para notificar os autores...">
-      Conteúdo:
-      <!-- <input> -->
-      <button>Enviar</button>
-    </form>
-
-    <h3>Após submeter o formulário, a seguinte mensagem deve ser exibida: Aguardando feedback dos autores</h3>
+    <img src="../assets/logo13slaca.jpg" width="220px" alt="Logo Slaca 13">
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link item-nav">
+          Apresentação
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link item-nav">
+          Comitês
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link item-nav">
+          Autores
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link item-nav">
+          Eixos temáticos
+        </a>
+      </li>
+      <li class="nav-item d-flex">
+        <div class="ativado"></div>
+        <a href="#" class="nav-link item-nav item-ativado">
+          Trabalhos
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link item-nav">
+          Contato
+        </a>
+      </li>
+    </ul>
   </div>
+  <!-- Header -->
 
-  <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
-    <title>Gray Clouds Background</title>
-    <path id="Path_39" data-name="Path 39" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" transform="translate(142.69 -634.312)" fill="#eee"/>
-  </svg>
+  <header class="border-bottom conteudo header-conteudo">
+    <div class="container h-full">
+      <div class="d-flex flex-wrap align-items-center justify-content-between h-full">
 
-</div>
+        <div>
+          <p>Anais do Simpósio Latino Americano de Ciências de Alimentos </p>
+          <p class="p-header">Anais do 13º Simpósio Latino Americano de Ciência de Alimentos </p>
+          <p>ISSN: 1234-5678</p>
+        </div>
+
+        <a class="btn btn-language dropdown-toggle d-flex" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2"
+            viewBox="0 0 16 16">
+            <path
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855q-.215.403-.395.872c.705.157 1.472.257 2.282.287zM4.249 3.539q.214-.577.481-1.078a7 7 0 0 1 .597-.933A7 7 0 0 0 3.051 3.05q.544.277 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9 9 0 0 1-1.565-.667A6.96 6.96 0 0 0 1.018 7.5zm1.4-2.741a12.3 12.3 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332M8.5 5.09V7.5h2.99a12.3 12.3 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.6 13.6 0 0 1 7.5 10.91V8.5zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741zm-3.282 3.696q.18.469.395.872c.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a7 7 0 0 1-.598-.933 9 9 0 0 1-.481-1.079 8.4 8.4 0 0 0-1.198.49 7 7 0 0 0 2.276 1.522zm-1.383-2.964A13.4 13.4 0 0 1 3.508 8.5h-2.49a6.96 6.96 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667m6.728 2.964a7 7 0 0 0 2.275-1.521 8.4 8.4 0 0 0-1.197-.49 9 9 0 0 1-.481 1.078 7 7 0 0 1-.597.933M8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855q.216-.403.395-.872A12.6 12.6 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.96 6.96 0 0 0 14.982 8.5h-2.49a13.4 13.4 0 0 1-.437 3.008M14.982 7.5a6.96 6.96 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008zM11.27 2.461q.266.502.482 1.078a8.4 8.4 0 0 0 1.196-.49 7 7 0 0 0-2.275-1.52c.218.283.418.597.597.932m-.488 1.343a8 8 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z" />
+          </svg> PT, BR
+        </a>
+
+        <div class="text-end d-flex align-items-center">
+          <div>
+            <p>Bem vindo!</p>
+            <p>alguem12@galoascience.com</p>
+          </div>
+          <div class="ms-2">
+            <img src="../assets/image.png" alt="mdo" width="32" height="32" class="rounded-circle">
+            <span class="position-absolute top-30 start-90 translate-middle badge rounded-pill bg-danger">
+              2
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteudo Principal-->
+  <div class="conteudo container">
+    <article>
+      <section class="d-flex justify-content-between section-h">
+        <div class="title-princ">
+          <h2 class="title-pag">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15
+            anos, do município de Campinas/SP</h2>
+          <img src="../assets/videothumb.jpg" alt="Video Análise" class="videothumb">
+        </div>
+        <div class="title-details">
+          <div class="d-flex align-items-center justify-content-end">
+            <a href="#" class="button text-white button-a">
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.75 0H9.25C9.45833 0 9.63542 0.0729167 9.78125 0.21875C9.92708 0.364583 10 0.541667 10 0.75V6H12.75C13.0208 6 13.2083 6.13542 13.3125 6.40625C13.4167 6.65625 13.375 6.875 13.1875 7.0625L8.4375 11.8125C8.3125 11.9375 8.16667 12 8 12C7.83333 12 7.6875 11.9375 7.5625 11.8125L2.8125 7.0625C2.625 6.875 2.58333 6.65625 2.6875 6.40625C2.79167 6.13542 2.97917 6 3.25 6H6V0.75C6 0.541667 6.07292 0.364583 6.21875 0.21875C6.36458 0.0729167 6.54167 0 6.75 0ZM16 11.75V15.25C16 15.4583 15.9271 15.6354 15.7812 15.7812C15.6354 15.9271 15.4583 16 15.25 16H0.75C0.541667 16 0.364583 15.9271 0.21875 15.7812C0.0729167 15.6354 0 15.4583 0 15.25V11.75C0 11.5417 0.0729167 11.3646 0.21875 11.2188C0.364583 11.0729 0.541667 11 0.75 11H5.34375L6.875 12.5312C7.1875 12.8438 7.5625 13 8 13C8.4375 13 8.8125 12.8438 9.125 12.5312L10.6562 11H15.25C15.4583 11 15.6354 11.0729 15.7812 11.2188C15.9271 11.3646 16 11.5417 16 11.75ZM11.9375 14.9375C12.0625 14.8125 12.125 14.6667 12.125 14.5C12.125 14.3333 12.0625 14.1875 11.9375 14.0625C11.8125 13.9375 11.6667 13.875 11.5 13.875C11.3333 13.875 11.1875 13.9375 11.0625 14.0625C10.9375 14.1875 10.875 14.3333 10.875 14.5C10.875 14.6667 10.9375 14.8125 11.0625 14.9375C11.1875 15.0625 11.3333 15.125 11.5 15.125C11.6667 15.125 11.8125 15.0625 11.9375 14.9375ZM13.9375 14.9375C14.0625 14.8125 14.125 14.6667 14.125 14.5C14.125 14.3333 14.0625 14.1875 13.9375 14.0625C13.8125 13.9375 13.6667 13.875 13.5 13.875C13.3333 13.875 13.1875 13.9375 13.0625 14.0625C12.9375 14.1875 12.875 14.3333 12.875 14.5C12.875 14.6667 12.9375 14.8125 13.0625 14.9375C13.1875 15.0625 13.3333 15.125 13.5 15.125C13.6667 15.125 13.8125 15.0625 13.9375 14.9375Z"
+                  fill="white" />
+              </svg>
+
+              Download
+            </a>
+            <a href="#" class="button text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-star-fill"
+                viewBox="0 0 16 16">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+            </a>
+            <a href="#" class="button text-white">
+              <img src="../assets/doi.svg" alt="icon DOI" width="19" height="19">
+            </a>
+          </div>
+          <p class="citacao">COMO CITAR ESSE TRABALHO?</p>
+          <nav class="navbar px-3 navbar-title">
+            <p class="navbar-brand">Detalhes</p>
+          </nav>
+          <div class="caixa-texto px-3">
+            <div class="my-3">
+              <p>Tipo de Apresentação: <strong>Pôster</strong></p>
+              <p>Eixo temático: <strong>Alimentação e saúde (AS)</strong></p>
+              <p>Palavras-chaves: <strong>Alimentos funcionais, alimentação escolar.</strong></p>
+            </div>
+
+            <div class="my-3">
+              <p><strong>Autores:</strong></p>
+              <p>Galileo Galilei¹</p>
+              <p>Berta Lange de Morretes²</p>
+              <p>Isaac Newton³</p>
+              <p>Cesar Lattes¹</p>
+              <p>Stephen Hawking⁴</p>
+            </div>
+
+            <div class="my-4 destalhes-univ">
+              <p>¹Universidade Estadual de Campinas</p>
+              <p>²Universidade de São Paulo</p>
+              <p>³Instituto Nacional de Pesquisas Espaciais</p>
+              <p>⁴Universidade Federal do Rio de Janeiro</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Resumo -->
+      <section class="my-4">
+        <nav class="navbar px-3 navbar-title">
+          <p class="navbar-brand">Resumo</p>
+        </nav>
+        <div class="px-3 resumo-paragrafo">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo adipisci reiciendis, voluptate error maiores
+            animi deserunt impedit! Sunt, tenetur odit. Eius ipsa, magni omnis itaque explicabo numquam officia nam ab!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quidem, aliquam, architecto debitis
+            praesentium vitae suscipit dolorum, similique repellat inventore recusandae ex doloremque ipsa sequi atque
+            et nemo hic. Voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum accusamus
+            explicabo omnis consequatur possimus, voluptatum quod et voluptatibus maxime doloremque quo quibusdam
+            dolores!
+            <a type="button" class="btn-show-more title-discussao button-a" data-bs-toggle="collapse"
+              data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+              ver mais
+            </a>
+          </p>
+          <div class="collapse" id="collapseWidthExample">
+            <p class="my-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora nisi odio dolorem ut
+              molestias iure maxime. Quae dolores nemo eum. Ullam asperiores reprehenderit distinctio sint molestiae
+              nobis beatae dolorum! Magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio quos
+              similique sapiente repellat nobis possimus, earum doloremque porro mollitia! Porro incidunt eligendi
+              provident tempore sint nostrum doloribus, iusto possimus. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Maiores incidunt aliquam alias eaque placeat at voluptate eveniet molestiae a sit, autem
+              omnis doloremque voluptatem provident! Porro praesentium sapiente id assumenda?</p>
+
+            <p class="my-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora nisi odio dolorem ut
+              molestias iure maxime. Quae dolores nemo eum. Ullam asperiores reprehenderit distinctio sint molestiae
+              nobis beatae dolorum! Magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio quos
+              similique sapiente repellat nobis possimus, earum doloremque porro mollitia! Porro incidunt eligendi
+              provident tempore sint nostrum doloribus, iusto possimus. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit.</p>
+
+            <p class="my-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora nisi odio dolorem ut
+              molestias iure maxime. Quae dolores nemo eum. Ullam asperiores reprehenderit distinctio sint molestiae
+              nobis beatae dolorum! Magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio quos
+              similique sapiente repellat nobis possimus, earum doloremque porro mollitia! Porro incidunt eligendi
+              provident tempore sint nostrum doloribus, iusto possimus. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Maiores incidunt aliquam alias eaque placeat at voluptate eveniet molestiae a sit, autem
+              omnis doloremque voluptatem provident! Porro praesentium sapiente id assumenda?</p>
+          </div>
+        </div>
+      </section>
+      <!-- Discussões -->
+      <section class="my-4 section-discussao">
+        <nav class="navbar px-3 navbar-title">
+          <p class="navbar-brand">Discussões</p>
+        </nav>
+        <div class="mx-4 my-5 border-bottom" *ngIf="!mostrarFormulario && !showMessage">
+          <div class="d-flex align-items-center justify-content-center flex-column div-discussao">
+            <h5 class="title-discussao">Compartilhe suas ideias ou dúvidas com os autores!</h5>
+            <div class="icon-discussao">
+              <svg width="51" height="49" viewBox="0 0 51 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.8603 18.0563C19.8603 16.0563 20.8603 8.55636 25.3603 3.55638C33.9103 -5.94368 47.1802 5.55627 41.8603 15.0563C38.3624 21.3025 53.3603 21.5563 50.3603 38.0563C47.3603 54.5563 28.8603 49.0563 25.3603 42.5563C21.8603 36.0563 16.3603 41.5563 5.86026 38.0563C-4.63974 34.5563 1.86026 20.5563 11.8603 18.0563Z"
+                  fill="#F4F4F4" />
+                <path
+                  d="M13.6355 25.0232C13.2829 25.0291 13 25.3177 13 25.6704V37.615C13 37.7933 13.1453 37.9386 13.3236 37.9386H16.3868C16.6754 37.9386 16.9293 37.7468 17.0087 37.4697L19.8665 27.3967C20.0506 26.7457 19.7018 26.0617 19.0663 25.8312C17.8961 25.403 16.1 24.9826 13.6355 25.0232Z"
+                  fill="#4D4D4D" />
+                <path
+                  d="M41.4175 32.1259C38.8349 32.1259 33.6675 35.3964 31.0849 35.3964C28.5022 35.3964 25.594 33.4163 25.594 33.4163C25.594 33.4163 29.0737 34.0615 31.0829 34.0615C33.0921 34.0615 33.6656 33.3756 33.6656 32.4475C33.6656 30.1865 29.8255 29.8358 27.8841 29.5413C25.9776 28.4795 24.9875 27.6406 21.8294 27.3732C21.81 27.5573 21.781 27.7394 21.7306 27.9235L19.1363 37.0685C22.0755 38.4054 27.1343 40.523 29.7906 40.523C33.6656 40.523 43.9983 35.3557 43.9983 34.0654C43.9983 32.775 42.7079 32.1259 41.4175 32.1259Z"
+                  fill="#4D4D4D" />
+                <path
+                  d="M42.603 10.3989C42.4906 10.0385 42.1186 9.76726 41.7427 9.71688C39.4565 9.41463 36.3236 9.00388 33.8164 11.2591C32.1502 12.7607 31.9293 15.2833 33.2216 17.0658C32.0243 18.2942 31.2648 19.5652 30.7862 20.6831C30.298 19.664 29.7245 18.7514 29.151 17.9668C29.4086 17.3293 29.5443 16.6279 29.5365 15.8878C29.521 14.394 28.9165 12.9293 27.9187 11.9721C24.8613 9.03101 21.027 9.41657 17.9464 9.72657L17.7875 9.74207C17.4117 9.78082 17.092 10.0327 16.968 10.3892C16.8459 10.7457 16.9408 11.1429 17.2121 11.4044C18.5916 12.7297 18.8725 14.1383 19.1709 15.6282C19.4363 16.9534 19.7095 18.3252 20.8275 19.4005C21.8853 20.4177 23.2823 20.9292 24.6463 20.9292C25.8746 20.9292 27.0681 20.501 27.973 19.6659C28.8371 20.9505 29.6469 22.5373 29.9744 24.3024C29.9821 24.3431 30.0054 24.376 30.017 24.4148C30.0325 24.4613 30.0461 24.5039 30.0674 24.5465C30.1023 24.6163 30.1449 24.6783 30.1953 24.7364C30.2205 24.7674 30.2418 24.7984 30.2708 24.8255C30.3367 24.8875 30.4123 24.9359 30.4936 24.9766C30.5169 24.9883 30.5363 25.0057 30.5614 25.0154C30.6758 25.0619 30.7978 25.0948 30.9257 25.0948C30.9838 25.0948 31.0439 25.089 31.1039 25.0793C31.1466 25.0716 31.1776 25.0464 31.2183 25.0328C31.2706 25.0154 31.3171 24.9979 31.3655 24.9747C31.4314 24.9418 31.4895 24.9011 31.5438 24.8546C31.5825 24.8216 31.6174 24.7868 31.6523 24.748C31.6988 24.6938 31.7356 24.6395 31.7704 24.5756C31.7976 24.5271 31.8189 24.4768 31.8363 24.4244C31.8576 24.3605 31.8693 24.2985 31.877 24.2326C31.8809 24.1978 31.8983 24.1687 31.8983 24.1319C31.9003 23.9808 31.9778 21.0222 34.7406 18.2826C35.1533 18.4531 35.6048 18.5674 36.0872 18.5964C36.1783 18.6023 36.2693 18.6061 36.3604 18.6061C37.488 18.6061 38.6079 18.1934 39.4042 17.4785C40.3458 16.6299 40.5996 15.5468 40.8438 14.5006C41.1014 13.3943 41.3456 12.3519 42.3899 11.4122C42.6689 11.1603 42.7154 10.7593 42.603 10.3989Z"
+                  fill="#F0A880" />
+              </svg>
+              <svg width="51" height="49" viewBox="0 0 51 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.8603 18.0563C19.8603 16.0563 20.8603 8.55636 25.3603 3.55638C33.9103 -5.94368 47.1802 5.55627 41.8603 15.0563C38.3624 21.3025 53.3603 21.5563 50.3603 38.0563C47.3603 54.5563 28.8603 49.0563 25.3603 42.5563C21.8603 36.0563 16.3603 41.5563 5.86026 38.0563C-4.63974 34.5563 1.86026 20.5563 11.8603 18.0563Z"
+                  fill="#F4F4F4" />
+                <path
+                  d="M47.0086 38.2829C47.0072 38.2783 47.0057 38.2737 47.0042 38.269L45.5898 33.9715V23.4476C45.5898 21.722 44.1859 20.3181 42.4602 20.3181H33.3247V25.4387C33.3247 28.3147 30.9849 30.6546 28.1088 30.6546H27.369V35.6875C27.369 37.4131 28.7729 38.817 30.4985 38.817H41.1156L43.8483 40.6355C44.2075 40.8786 44.6138 40.9998 45.0192 40.9998C45.4538 40.9998 45.8876 40.8606 46.2613 40.5832C46.9851 40.0461 47.2785 39.1432 47.0086 38.2829ZM39.9078 34.577C39.3688 34.7805 38.7669 34.5083 38.5635 33.9693L38.1092 32.7656H34.9337L34.4741 33.9723C34.3156 34.3884 33.9194 34.6444 33.499 34.6444C33.3756 34.6444 33.2501 34.6224 33.128 34.5759C32.5895 34.3708 32.3194 33.7681 32.5244 33.2297L35.3971 25.687C35.4001 25.6791 35.4032 25.6711 35.4064 25.6633C35.5941 25.2045 36.0356 24.9078 36.5312 24.9073C37.0296 24.9047 37.4689 25.2027 37.6575 25.6611C37.6614 25.6706 37.6651 25.68 37.6687 25.6896L40.5153 33.2326C40.7188 33.7716 40.4468 34.3735 39.9078 34.577Z"
+                  fill="#F0A880" />
+                <path d="M35.7283 30.6794H37.3218L36.5287 28.5777L35.7283 30.6794Z" fill="#F0A880" />
+                <path
+                  d="M28.1088 10H16.1471C14.4215 10 13.0176 11.4039 13.0176 13.1295V23.7232L11.6032 28.0211C11.6017 28.0257 11.6002 28.0305 11.5987 28.0351C11.3291 28.8951 11.6226 29.7978 12.3464 30.3348C12.7201 30.612 13.1538 30.7513 13.5883 30.7513C13.9936 30.7513 14.3997 30.6303 14.7587 30.3872L17.4917 28.5685H28.1087C29.8344 28.5685 31.2383 27.1646 31.2383 25.439V13.1296C31.2383 11.4039 29.8344 10 28.1088 10ZM26.4819 23.9186C26.2782 24.1223 26.0112 24.2241 25.7443 24.2241C25.4773 24.2241 25.2104 24.1223 25.0067 23.9186L24.5499 23.4617C23.7851 23.9625 22.8722 24.255 21.8918 24.255C19.2085 24.255 17.0255 22.0719 17.0255 19.3887C17.0255 16.7054 19.2085 14.5224 21.8918 14.5224C24.575 14.5224 26.758 16.7054 26.758 19.3887C26.758 20.3379 26.4839 21.2238 26.012 21.9733L26.482 22.4432C26.8893 22.8508 26.8893 23.5112 26.4819 23.9186Z"
+                  fill="#F0A880" />
+                <path
+                  d="M21.8917 16.6089C20.3589 16.6089 19.1118 17.856 19.1118 19.3889C19.1118 20.9217 20.3589 22.1688 21.8917 22.1688C22.2924 22.1688 22.6732 22.0829 23.0177 21.9296L22.5606 21.4726C22.1532 21.0652 22.1532 20.4047 22.5606 19.9973C22.968 19.5899 23.6285 19.5899 24.0359 19.9973L24.4686 20.43C24.5991 20.1082 24.6716 19.7569 24.6716 19.3889C24.6716 17.856 23.4246 16.6089 21.8917 16.6089Z"
+                  fill="#F0A880" />
+              </svg>
+              <svg width="51" height="49" viewBox="0 0 51 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.8603 18.0563C19.8603 16.0563 20.8603 8.55636 25.3603 3.55638C33.9103 -5.94368 47.1802 5.55627 41.8603 15.0563C38.3624 21.3025 53.3603 21.5563 50.3603 38.0563C47.3603 54.5563 28.8603 49.0563 25.3603 42.5563C21.8603 36.0563 16.3603 41.5563 5.86026 38.0563C-4.63974 34.5563 1.86026 20.5563 11.8603 18.0563Z"
+                  fill="#F4F4F4" />
+                <path
+                  d="M40.1414 33.6881H32.922C30.9315 33.6881 29.3132 35.3064 29.3132 37.2968V39.2656C29.3132 39.809 29.7542 40.25 30.2976 40.25H42.7657C43.3091 40.25 43.7501 39.809 43.7501 39.2656V37.2968C43.7501 35.3064 42.1318 33.6881 40.1414 33.6881Z"
+                  fill="#4D4D4D" />
+                <path
+                  d="M23.0781 33.6881H15.8587C13.8683 33.6881 12.25 35.3064 12.25 37.2968V39.2656C12.25 39.809 12.691 40.25 13.2344 40.25H25.7025C26.2458 40.25 26.6868 39.809 26.6868 39.2656V37.2968C26.6868 35.3064 25.0685 33.6881 23.0781 33.6881Z"
+                  fill="#4D4D4D" />
+                <path
+                  d="M36.5305 31.0618C38.7051 31.0618 40.468 29.2989 40.468 27.1243C40.468 24.9496 38.7051 23.1868 36.5305 23.1868C34.3559 23.1868 32.593 24.9496 32.593 27.1243C32.593 29.2989 34.3559 31.0618 36.5305 31.0618Z"
+                  fill="#4D4D4D" />
+                <path
+                  d="M19.4695 31.0618C21.6441 31.0618 23.407 29.2989 23.407 27.1243C23.407 24.9496 21.6441 23.1868 19.4695 23.1868C17.2949 23.1868 15.532 24.9496 15.532 27.1243C15.532 29.2989 17.2949 31.0618 19.4695 31.0618Z"
+                  fill="#4D4D4D" />
+                <path
+                  d="M30.6775 22.1001V23.0451C30.6775 23.8464 30.0219 24.502 29.2068 24.502H26.7912C26.0824 24.502 25.3205 23.9763 25.3205 22.8088V22.1001H30.6775Z"
+                  fill="#F0A880" />
+                <path
+                  d="M33.9063 14.6188C33.9063 16.3906 33.1188 18.0444 31.7407 19.1607C31.1894 19.6076 30.8351 20.1844 30.7169 20.7888H25.297C25.2044 20.1982 24.8776 19.6469 24.3382 19.2276C22.8813 18.0857 22.0544 16.367 22.0938 14.5026C22.1588 11.3782 24.7713 8.79323 27.9075 8.75385C29.4963 8.71448 31.0182 9.3307 32.16 10.4608C33.2901 11.5613 33.9063 13.0438 33.9063 14.6188Z"
+                  fill="#F0A880" />
+              </svg>
+            </div>
+            <p>
+              Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus
+              questionamentos ou sugestões para o autor!
+            </p>
+          </div>
+          <div class="div-btn" *ngIf="!mostrarFormulario && !showMessage">
+            <button class="btn btn-topico btn-create-topic" (click)="toggleFormulario()">criar tópico</button>
+          </div>
+        </div>
+        <!-- Formulario -->
+        <ng-container *ngIf="mostrarFormulario && !showMessage">
+          <div class="mx-4 my-5 py-2 border-bottom" *ngIf="mostrarFormulario && !showMessage">
+            <div class="d-flex align-items-center justify-content-center flex-column">
+              <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
+            </div>
+            <form class="d-flex flex-column" (ngSubmit)="submitForm()" [formGroup]="myForm">
+              <label for="assunto" class="title-discussao label-form">Assunto</label>
+              <input type="text" class="input subject" formControlName="assunto" id="assunto"
+                placeholder="Defina um tópico sucinto para notificar os autores...">
+              <label for="conteudo" class="title-discussao label-form">Conteúdo</label>
+              <textarea class="input-cont" name="conteudo" id="conteudo" cols="30" rows="5"
+                formControlName="conteudo"></textarea>
+              <div class="d-flex justify-content-end div-botao-feedback">
+                <button class="btn-enviar btn-create-topic" type="submit">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </ng-container>
+        <!-- Div de Resposta -->
+        <div class="mx-4 my-5 border-bottom" *ngIf="showMessage">
+          <div class="d-flex align-items-center justify-content-center flex-column" class="message"
+            [ngClass]="{'show-message': showMessage}">
+            <h5 class="title-discussao">Seu Tópico foi enviado com sucesso! :D </h5>
+            <p class="my-3">
+              Agradeçemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for
+              respondido!
+            </p>
+            <a href="#" class="link-descubra">Descubra outros trabalhos!</a>
+          </div>
+          <div class="div-btn">
+            <button class="btn btn-topico" (click)="toggleFormulario()">Criar um Novo Tópico</button>
+          </div>
+        </div>
+        <!-- Card de Resposta-->
+        <div class="mx-4 my-4 card-topico card-resp-topico" *ngIf="showMessage">
+          <div class="d-flex flex-column justify-content-center align-items-center card-cima">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.1671 7.33594C20.3494 7.51823 20.4406 7.73958 20.4406 8C20.4406 8.26042 20.3494 8.48177 20.1671 8.66406L8.60461 20.2266C8.42232 20.4089 8.20097 20.5 7.94055 20.5C7.68014 20.5 7.45878 20.4089 7.27649 20.2266L0.713989 13.6641C0.531698 13.4818 0.440552 13.2604 0.440552 13C0.440552 12.7396 0.531698 12.5182 0.713989 12.3359L2.27649 10.7734C2.45878 10.5911 2.68014 10.5 2.94055 10.5C3.20097 10.5 3.42232 10.5911 3.60461 10.7734L7.94055 15.1484L17.3156 5.77344C17.4718 5.59115 17.6801 5.5 17.9406 5.5C18.201 5.5 18.4223 5.59115 18.6046 5.77344L20.1671 7.33594ZM7.51086 11.4766L3.13586 7.10156C2.82336 6.78906 2.82336 6.48958 3.13586 6.20312L4.89368 4.44531C5.02389 4.3151 5.16711 4.25 5.32336 4.25C5.50566 4.25 5.66191 4.3151 5.79211 4.44531L7.94055 6.59375L13.8781 0.695312C13.9822 0.565104 14.1124 0.5 14.2687 0.5C14.451 0.5 14.6072 0.565104 14.7374 0.695312L16.4952 2.45312C16.8077 2.73958 16.8077 3.03906 16.4952 3.35156L8.37024 11.4766C8.26607 11.6068 8.12284 11.6719 7.94055 11.6719C7.75826 11.6719 7.61503 11.6068 7.51086 11.4766Z"
+                fill="#707070" />
+            </svg>
+            <p class="p-feedback">Aguardando feedback dos autores</p>
+            <a href="#" class="link-descubra">Editar tópico</a>
+          </div>
+          <div class="card-resp">
+            <h5 class="title-discussao">Assunto da pergunta aparece aqui</h5>
+            <span class="name-discussao">Carlos Henrique Santos</span>
+            <p class="body-discussao">
+              Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de
+              processo formativo situado impacto de processo formativo processo...
+            </p>
+            <div class="footer-topico d-flex align-items-center">
+              <svg width="4" height="18" viewBox="0 0 4 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="2" cy="16" r="2" fill="#ED7839" />
+                <circle cx="2" cy="9" r="2" fill="#ED7839" />
+                <circle cx="2" cy="2" r="2" fill="#ED7839" />
+              </svg>
+
+              <svg width="31" height="25" viewBox="0 0 31 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_dd_316_601)">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4 2C2.89543 2 2 2.89543 2 4V19C2 20.1046 2.89543 21 4 21H27C28.1046 21 29 20.1046 29 19V4C29 2.89543 28.1046 2 27 2H4Z"
+                    fill="#ED7839" />
+                </g>
+                <path
+                  d="M15 17.4414L14.1523 16.6758C13.1862 15.8008 12.4844 15.1536 12.0469 14.7344C11.6094 14.3151 11.1172 13.7956 10.5703 13.1758C10.0417 12.556 9.67708 12 9.47656 11.5078C9.27604 10.9974 9.17578 10.4779 9.17578 9.94922C9.17578 9.05599 9.47656 8.29948 10.0781 7.67969C10.6979 7.0599 11.4635 6.75 12.375 6.75C13.4323 6.75 14.3073 7.16016 15 7.98047C15.6927 7.16016 16.5677 6.75 17.625 6.75C18.5365 6.75 19.293 7.0599 19.8945 7.67969C20.5143 8.29948 20.8242 9.05599 20.8242 9.94922C20.8242 10.6602 20.5872 11.3984 20.1133 12.1641C19.6393 12.9297 19.1198 13.5951 18.5547 14.1602C18.0078 14.7253 17.1055 15.5729 15.8477 16.7031L15 17.4414Z"
+                  fill="white" />
+                <defs>
+                  <filter id="filter0_dd_316_601" x="0" y="0" width="31" height="25" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset dy="2" />
+                    <feGaussianBlur stdDeviation="1" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_316_601" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="1" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0" />
+                    <feBlend mode="normal" in2="effect1_dropShadow_316_601" result="effect2_dropShadow_316_601" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_316_601" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+              <p>1 Like</p>
+              <p>1 Resposta</p>
+            </div>
+          </div>
+        </div>
+        <!-- Topico de discussões -->
+        <div class="mx-4 my-4 card-topico card-padding">
+          <h5 class="title-discussao">Assunto da pergunta aparece aqui</h5>
+          <span class="name-discussao">Carlos Henrique Santos</span>
+          <p class="body-discussao">
+            Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de
+            processo formativo situado impacto de processo formativo processo...
+          </p>
+          <div class="footer-topico d-flex align-items-center">
+            <svg width="4" height="18" viewBox="0 0 4 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="2" cy="16" r="2" fill="#ED7839" />
+              <circle cx="2" cy="9" r="2" fill="#ED7839" />
+              <circle cx="2" cy="2" r="2" fill="#ED7839" />
+            </svg>
+
+            <svg width="31" height="25" viewBox="0 0 31 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_dd_316_601)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M4 2C2.89543 2 2 2.89543 2 4V19C2 20.1046 2.89543 21 4 21H27C28.1046 21 29 20.1046 29 19V4C29 2.89543 28.1046 2 27 2H4Z"
+                  fill="#ED7839" />
+              </g>
+              <path
+                d="M15 17.4414L14.1523 16.6758C13.1862 15.8008 12.4844 15.1536 12.0469 14.7344C11.6094 14.3151 11.1172 13.7956 10.5703 13.1758C10.0417 12.556 9.67708 12 9.47656 11.5078C9.27604 10.9974 9.17578 10.4779 9.17578 9.94922C9.17578 9.05599 9.47656 8.29948 10.0781 7.67969C10.6979 7.0599 11.4635 6.75 12.375 6.75C13.4323 6.75 14.3073 7.16016 15 7.98047C15.6927 7.16016 16.5677 6.75 17.625 6.75C18.5365 6.75 19.293 7.0599 19.8945 7.67969C20.5143 8.29948 20.8242 9.05599 20.8242 9.94922C20.8242 10.6602 20.5872 11.3984 20.1133 12.1641C19.6393 12.9297 19.1198 13.5951 18.5547 14.1602C18.0078 14.7253 17.1055 15.5729 15.8477 16.7031L15 17.4414Z"
+                fill="white" />
+              <defs>
+                <filter id="filter0_dd_316_601" x="0" y="0" width="31" height="25" filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha" />
+                  <feOffset dy="2" />
+                  <feGaussianBlur stdDeviation="1" />
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0" />
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_316_601" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha" />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="1" />
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0" />
+                  <feBlend mode="normal" in2="effect1_dropShadow_316_601" result="effect2_dropShadow_316_601" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_316_601" result="shape" />
+                </filter>
+              </defs>
+            </svg>
+            <p>1 Like</p>
+            <p>1 Resposta</p>
+          </div>
+        </div>
+        <div class="mx-4 card-topico">
+          <div class="card-padding answered-topic" (click)="toggleTopico()">
+            <h5 class="title-discussao ops-topic-subject">Assunto da pergunta aparece aqui</h5>
+            <span class="name-discussao">Carlos Henrique Santos</span>
+            <p class="body-discussao comments-container">
+              Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de
+              processo formativo situado impacto de processo formativo processo...
+            </p>
+            <div class="footer-topico d-flex align-items-center">
+              <svg width="4" height="18" viewBox="0 0 4 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="2" cy="16" r="2" fill="#ED7839" />
+                <circle cx="2" cy="9" r="2" fill="#ED7839" />
+                <circle cx="2" cy="2" r="2" fill="#ED7839" />
+              </svg>
+
+              <svg width="31" height="25" viewBox="0 0 31 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_dd_316_601)">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4 2C2.89543 2 2 2.89543 2 4V19C2 20.1046 2.89543 21 4 21H27C28.1046 21 29 20.1046 29 19V4C29 2.89543 28.1046 2 27 2H4Z"
+                    fill="#ED7839" />
+                </g>
+                <path
+                  d="M15 17.4414L14.1523 16.6758C13.1862 15.8008 12.4844 15.1536 12.0469 14.7344C11.6094 14.3151 11.1172 13.7956 10.5703 13.1758C10.0417 12.556 9.67708 12 9.47656 11.5078C9.27604 10.9974 9.17578 10.4779 9.17578 9.94922C9.17578 9.05599 9.47656 8.29948 10.0781 7.67969C10.6979 7.0599 11.4635 6.75 12.375 6.75C13.4323 6.75 14.3073 7.16016 15 7.98047C15.6927 7.16016 16.5677 6.75 17.625 6.75C18.5365 6.75 19.293 7.0599 19.8945 7.67969C20.5143 8.29948 20.8242 9.05599 20.8242 9.94922C20.8242 10.6602 20.5872 11.3984 20.1133 12.1641C19.6393 12.9297 19.1198 13.5951 18.5547 14.1602C18.0078 14.7253 17.1055 15.5729 15.8477 16.7031L15 17.4414Z"
+                  fill="white" />
+                <defs>
+                  <filter id="filter0_dd_316_601" x="0" y="0" width="31" height="25" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset dy="2" />
+                    <feGaussianBlur stdDeviation="1" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_316_601" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="1" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0" />
+                    <feBlend mode="normal" in2="effect1_dropShadow_316_601" result="effect2_dropShadow_316_601" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_316_601" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+              <p>1 Like</p>
+              <p>1 Resposta</p>
+            </div>
+          </div>
+          <hr class="line-topico">
+          <div *ngIf="mostrarTopico">
+            <div class="border-bottom card-padding bg-autor-coautor">
+              <div class="d-flex justify-content-between">
+                <span class="name-discussao">Adriano da silva</span>
+                <div>
+                  <svg class="icon-topico" width="38" height="11" viewBox="0 0 38 11" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.52091 8.908C9.56758 9.02933 9.59091 9.14133 9.59091 9.244C9.59091 9.48667 9.51158 9.68733 9.35291 9.846C9.19425 9.99533 9.01225 10.07 8.80691 10.07C8.63891 10.07 8.48491 10.0187 8.34491 9.916C8.21425 9.81333 8.11158 9.67333 8.03691 9.496L7.30891 7.802H3.13691L2.40891 9.51C2.34358 9.68733 2.24091 9.82733 2.10091 9.93C1.97025 10.0233 1.82558 10.07 1.66691 10.07C1.42425 10.07 1.23758 10.0047 1.10691 9.874C0.985579 9.74333 0.924912 9.566 0.924912 9.342C0.924912 9.258 0.938912 9.16933 0.966912 9.076L4.45291 0.704C4.52758 0.517333 4.63958 0.372666 4.78891 0.269999C4.93825 0.167333 5.10625 0.125333 5.29291 0.143999C5.46091 0.143999 5.61491 0.195333 5.75491 0.298C5.90425 0.391333 6.01158 0.526666 6.07691 0.704L9.52091 8.908ZM6.62291 6.192L5.20891 2.916L3.82291 6.192H6.62291ZM16.0576 2.51C16.3003 2.51 16.5009 2.594 16.6596 2.762C16.8183 2.92067 16.8976 3.12133 16.8976 3.364V6.92C16.8976 7.928 16.6176 8.71667 16.0576 9.286C15.5069 9.85533 14.7183 10.14 13.6916 10.14C12.6649 10.14 11.8763 9.85533 11.3256 9.286C10.7749 8.71667 10.4996 7.928 10.4996 6.92V3.364C10.4996 3.12133 10.5789 2.92067 10.7376 2.762C10.8963 2.594 11.0969 2.51 11.3396 2.51C11.5823 2.51 11.7829 2.594 11.9416 2.762C12.1003 2.92067 12.1796 3.12133 12.1796 3.364V6.92C12.1796 7.48933 12.3056 7.914 12.5576 8.194C12.8096 8.46467 13.1876 8.6 13.6916 8.6C14.2049 8.6 14.5876 8.46467 14.8396 8.194C15.0916 7.914 15.2176 7.48933 15.2176 6.92V3.364C15.2176 3.12133 15.2969 2.92067 15.4556 2.762C15.6143 2.594 15.8149 2.51 16.0576 2.51ZM22.3284 8.418C22.4591 8.418 22.5757 8.48333 22.6784 8.614C22.7904 8.73533 22.8464 8.89867 22.8464 9.104C22.8464 9.356 22.7064 9.57067 22.4264 9.748C22.1557 9.916 21.8477 10 21.5024 10C20.9237 10 20.4337 9.87867 20.0324 9.636C19.6404 9.384 19.4444 8.85667 19.4444 8.054V4.19H18.8004C18.5764 4.19 18.3897 4.11533 18.2404 3.966C18.0911 3.81667 18.0164 3.63 18.0164 3.406C18.0164 3.19133 18.0911 3.014 18.2404 2.874C18.3897 2.72467 18.5764 2.65 18.8004 2.65H19.4444V1.754C19.4444 1.51133 19.5237 1.31067 19.6824 1.152C19.8504 0.984 20.0557 0.899999 20.2984 0.899999C20.5317 0.899999 20.7277 0.984 20.8864 1.152C21.0451 1.31067 21.1244 1.51133 21.1244 1.754V2.65H22.1184C22.3424 2.65 22.5291 2.72467 22.6784 2.874C22.8277 3.02333 22.9024 3.21 22.9024 3.434C22.9024 3.64867 22.8277 3.83067 22.6784 3.98C22.5291 4.12 22.3424 4.19 22.1184 4.19H21.1244V7.984C21.1244 8.18 21.1757 8.32467 21.2784 8.418C21.3811 8.502 21.5211 8.544 21.6984 8.544C21.7731 8.544 21.8757 8.52533 22.0064 8.488C22.1184 8.44133 22.2257 8.418 22.3284 8.418ZM31.5726 6.262C31.5726 7.00867 31.4046 7.68067 31.0686 8.278C30.7326 8.866 30.2706 9.32333 29.6826 9.65C29.1039 9.97667 28.4646 10.14 27.7646 10.14C27.0552 10.14 26.4112 9.97667 25.8326 9.65C25.2539 9.32333 24.7966 8.866 24.4606 8.278C24.1246 7.68067 23.9566 7.00867 23.9566 6.262C23.9566 5.51533 24.1246 4.848 24.4606 4.26C24.7966 3.66267 25.2539 3.20067 25.8326 2.874C26.4112 2.538 27.0552 2.37 27.7646 2.37C28.4646 2.37 29.1039 2.538 29.6826 2.874C30.2706 3.20067 30.7326 3.66267 31.0686 4.26C31.4046 4.848 31.5726 5.51533 31.5726 6.262ZM29.8926 6.262C29.8926 5.80467 29.7946 5.39867 29.5986 5.044C29.4119 4.68 29.1552 4.4 28.8286 4.204C28.5112 4.008 28.1566 3.91 27.7646 3.91C27.3726 3.91 27.0132 4.008 26.6866 4.204C26.3692 4.4 26.1126 4.68 25.9166 5.044C25.7299 5.39867 25.6366 5.80467 25.6366 6.262C25.6366 6.71933 25.7299 7.12533 25.9166 7.48C26.1126 7.83467 26.3692 8.11 26.6866 8.306C27.0132 8.502 27.3726 8.6 27.7646 8.6C28.1566 8.6 28.5112 8.502 28.8286 8.306C29.1552 8.11 29.4119 7.83467 29.5986 7.48C29.7946 7.12533 29.8926 6.71933 29.8926 6.262ZM36.8682 2.37C37.1482 2.37 37.3815 2.44933 37.5682 2.608C37.7642 2.76667 37.8622 2.95333 37.8622 3.168C37.8622 3.45733 37.7875 3.67667 37.6382 3.826C37.4888 3.966 37.3115 4.036 37.1062 4.036C36.9662 4.036 36.8075 4.00333 36.6302 3.938C36.6022 3.92867 36.5368 3.91 36.4342 3.882C36.3408 3.854 36.2382 3.84 36.1262 3.84C35.8835 3.84 35.6502 3.91467 35.4262 4.064C35.2022 4.21333 35.0155 4.442 34.8662 4.75C34.7262 5.04867 34.6562 5.408 34.6562 5.828V9.146C34.6562 9.38867 34.5768 9.594 34.4182 9.762C34.2595 9.92067 34.0588 10 33.8162 10C33.5735 10 33.3728 9.92067 33.2142 9.762C33.0555 9.594 32.9762 9.38867 32.9762 9.146V3.364C32.9762 3.12133 33.0555 2.92067 33.2142 2.762C33.3728 2.594 33.5735 2.51 33.8162 2.51C34.0588 2.51 34.2595 2.594 34.4182 2.762C34.5768 2.92067 34.6562 3.12133 34.6562 3.364V3.546C34.8708 3.16333 35.1788 2.874 35.5802 2.678C35.9815 2.47267 36.4108 2.37 36.8682 2.37Z"
+                      fill="#ED7839" />
+                  </svg>
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.6603 7.33594C20.8426 7.51823 20.9337 7.73958 20.9337 8C20.9337 8.26042 20.8426 8.48177 20.6603 8.66406L9.09778 20.2266C8.91549 20.4089 8.69413 20.5 8.43372 20.5C8.1733 20.5 7.95194 20.4089 7.76965 20.2266L1.20715 13.6641C1.02486 13.4818 0.933716 13.2604 0.933716 13C0.933716 12.7396 1.02486 12.5182 1.20715 12.3359L2.76965 10.7734C2.95194 10.5911 3.1733 10.5 3.43372 10.5C3.69413 10.5 3.91549 10.5911 4.09778 10.7734L8.43372 15.1484L17.8087 5.77344C17.965 5.59115 18.1733 5.5 18.4337 5.5C18.6941 5.5 18.9155 5.59115 19.0978 5.77344L20.6603 7.33594ZM8.00403 11.4766L3.62903 7.10156C3.31653 6.78906 3.31653 6.48958 3.62903 6.20312L5.38684 4.44531C5.51705 4.3151 5.66028 4.25 5.81653 4.25C5.99882 4.25 6.15507 4.3151 6.28528 4.44531L8.43372 6.59375L14.3712 0.695312C14.4754 0.565104 14.6056 0.5 14.7618 0.5C14.9441 0.5 15.1004 0.565104 15.2306 0.695312L16.9884 2.45312C17.3009 2.73958 17.3009 3.03906 16.9884 3.35156L8.8634 11.4766C8.75924 11.6068 8.61601 11.6719 8.43372 11.6719C8.25142 11.6719 8.10819 11.6068 8.00403 11.4766Z"
+                      fill="#ED7839" />
+                  </svg>
+                </div>
+              </div>
+              <p class="body-discussao comments-container">
+                Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo
+                formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise
+                da
+                dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+              </p>
+            </div>
+            <!-- Card Carlos Henrique Resposta -->
+            <div class="border-bottom card-padding">
+              <div class="d-flex justify-content-between">
+                <span class="name-discussao">Carlos Henrique Santos</span>
+              </div>
+              <p class="body-discussao comments-container">
+                Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de processo
+                formativo situado impacto de processo formativo.
+              </p>
+              <p class="body-discussao comments-container">
+                Obrigada pela resposta, muito interessante o seu trabalho!
+              </p>
+            </div>
+            <!-- Card Reposta CoAutor -->
+            <div class="border-bottom card-padding bg-autor-coautor">
+              <div class="d-flex justify-content-between">
+                <span class="name-discussao">Carmila Ferreira Andrade</span>
+                <div>
+                  <svg class="icon-topico" width="55" height="11" viewBox="0 0 55 11" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.98724 0.676C8.27657 0.825333 8.42124 1.06333 8.42124 1.39C8.42124 1.586 8.35124 1.77733 8.21124 1.964C8.0619 2.16 7.87057 2.258 7.63724 2.258C7.47857 2.258 7.3199 2.216 7.16124 2.132C6.7039 1.91733 6.20924 1.81 5.67724 1.81C5.0239 1.81 4.45457 1.95 3.96924 2.23C3.4839 2.50067 3.11057 2.888 2.84924 3.392C2.5879 3.88667 2.45724 4.456 2.45724 5.1C2.45724 6.20133 2.75124 7.03667 3.33924 7.606C3.93657 8.17533 4.7159 8.46 5.67724 8.46C6.24657 8.46 6.74124 8.35267 7.16124 8.138C7.32924 8.06333 7.47857 8.026 7.60924 8.026C7.8519 8.026 8.05724 8.12867 8.22524 8.334C8.36524 8.51133 8.43524 8.70267 8.43524 8.908C8.43524 9.05733 8.3979 9.19267 8.32324 9.314C8.24857 9.43533 8.14124 9.52867 8.00124 9.594C7.27324 9.958 6.49857 10.14 5.67724 10.14C4.76257 10.14 3.92257 9.94867 3.15724 9.566C2.3919 9.174 1.78057 8.6 1.32324 7.844C0.865903 7.088 0.637236 6.17333 0.637236 5.1C0.637236 4.148 0.851903 3.294 1.28124 2.538C1.7199 1.782 2.3219 1.194 3.08724 0.773999C3.85257 0.344666 4.7159 0.129999 5.67724 0.129999C6.5079 0.129999 7.2779 0.312 7.98724 0.676ZM16.9606 6.262C16.9606 7.00867 16.7926 7.68067 16.4566 8.278C16.1206 8.866 15.6586 9.32333 15.0706 9.65C14.4919 9.97667 13.8526 10.14 13.1526 10.14C12.4432 10.14 11.7992 9.97667 11.2206 9.65C10.6419 9.32333 10.1846 8.866 9.84858 8.278C9.51258 7.68067 9.34458 7.00867 9.34458 6.262C9.34458 5.51533 9.51258 4.848 9.84858 4.26C10.1846 3.66267 10.6419 3.20067 11.2206 2.874C11.7992 2.538 12.4432 2.37 13.1526 2.37C13.8526 2.37 14.4919 2.538 15.0706 2.874C15.6586 3.20067 16.1206 3.66267 16.4566 4.26C16.7926 4.848 16.9606 5.51533 16.9606 6.262ZM15.2806 6.262C15.2806 5.80467 15.1826 5.39867 14.9866 5.044C14.7999 4.68 14.5432 4.4 14.2166 4.204C13.8992 4.008 13.5446 3.91 13.1526 3.91C12.7606 3.91 12.4012 4.008 12.0746 4.204C11.7572 4.4 11.5006 4.68 11.3046 5.044C11.1179 5.39867 11.0246 5.80467 11.0246 6.262C11.0246 6.71933 11.1179 7.12533 11.3046 7.48C11.5006 7.83467 11.7572 8.11 12.0746 8.306C12.4012 8.502 12.7606 8.6 13.1526 8.6C13.5446 8.6 13.8992 8.502 14.2166 8.306C14.5432 8.11 14.7999 7.83467 14.9866 7.48C15.1826 7.12533 15.2806 6.71933 15.2806 6.262ZM24.4262 2.37C24.6689 2.37 24.8695 2.44933 25.0282 2.608C25.1869 2.76667 25.2662 2.972 25.2662 3.224V9.146C25.2662 9.38867 25.1869 9.594 25.0282 9.762C24.8695 9.92067 24.6689 10 24.4262 10C24.1835 10 23.9829 9.92067 23.8242 9.762C23.6749 9.60333 23.5955 9.40267 23.5862 9.16C23.3529 9.43067 23.0355 9.664 22.6342 9.86C22.2422 10.0467 21.8269 10.14 21.3882 10.14C20.7442 10.14 20.1609 9.97667 19.6382 9.65C19.1155 9.314 18.7002 8.852 18.3922 8.264C18.0935 7.676 17.9442 7.00867 17.9442 6.262C17.9442 5.51533 18.0935 4.848 18.3922 4.26C18.6909 3.66267 19.0969 3.20067 19.6102 2.874C20.1329 2.538 20.7069 2.37 21.3322 2.37C21.7802 2.37 22.2002 2.454 22.5922 2.622C22.9842 2.78067 23.3155 2.986 23.5862 3.238V3.224C23.5862 2.98133 23.6655 2.78067 23.8242 2.622C23.9829 2.454 24.1835 2.37 24.4262 2.37ZM21.5982 8.6C22.2049 8.6 22.6995 8.38067 23.0822 7.942C23.4649 7.494 23.6562 6.934 23.6562 6.262C23.6562 5.59 23.4649 5.03 23.0822 4.582C22.6995 4.134 22.2049 3.91 21.5982 3.91C21.0009 3.91 20.5109 4.134 20.1282 4.582C19.7455 5.03 19.5542 5.59 19.5542 6.262C19.5542 6.934 19.7409 7.494 20.1142 7.942C20.4969 8.38067 20.9915 8.6 21.5982 8.6ZM32.5081 2.51C32.7508 2.51 32.9515 2.594 33.1101 2.762C33.2688 2.92067 33.3481 3.12133 33.3481 3.364V6.92C33.3481 7.928 33.0681 8.71667 32.5081 9.286C31.9575 9.85533 31.1688 10.14 30.1421 10.14C29.1155 10.14 28.3268 9.85533 27.7761 9.286C27.2255 8.71667 26.9501 7.928 26.9501 6.92V3.364C26.9501 3.12133 27.0295 2.92067 27.1881 2.762C27.3468 2.594 27.5475 2.51 27.7901 2.51C28.0328 2.51 28.2335 2.594 28.3921 2.762C28.5508 2.92067 28.6301 3.12133 28.6301 3.364V6.92C28.6301 7.48933 28.7561 7.914 29.0081 8.194C29.2601 8.46467 29.6381 8.6 30.1421 8.6C30.6555 8.6 31.0381 8.46467 31.2901 8.194C31.5421 7.914 31.6681 7.48933 31.6681 6.92V3.364C31.6681 3.12133 31.7475 2.92067 31.9061 2.762C32.0648 2.594 32.2655 2.51 32.5081 2.51ZM38.7789 8.418C38.9096 8.418 39.0263 8.48333 39.1289 8.614C39.2409 8.73533 39.2969 8.89867 39.2969 9.104C39.2969 9.356 39.1569 9.57067 38.8769 9.748C38.6063 9.916 38.2983 10 37.9529 10C37.3743 10 36.8843 9.87867 36.4829 9.636C36.0909 9.384 35.8949 8.85667 35.8949 8.054V4.19H35.2509C35.0269 4.19 34.8403 4.11533 34.6909 3.966C34.5416 3.81667 34.4669 3.63 34.4669 3.406C34.4669 3.19133 34.5416 3.014 34.6909 2.874C34.8403 2.72467 35.0269 2.65 35.2509 2.65H35.8949V1.754C35.8949 1.51133 35.9743 1.31067 36.1329 1.152C36.3009 0.984 36.5063 0.899999 36.7489 0.899999C36.9823 0.899999 37.1783 0.984 37.3369 1.152C37.4956 1.31067 37.5749 1.51133 37.5749 1.754V2.65H38.5689C38.7929 2.65 38.9796 2.72467 39.1289 2.874C39.2783 3.02333 39.3529 3.21 39.3529 3.434C39.3529 3.64867 39.2783 3.83067 39.1289 3.98C38.9796 4.12 38.7929 4.19 38.5689 4.19H37.5749V7.984C37.5749 8.18 37.6263 8.32467 37.7289 8.418C37.8316 8.502 37.9716 8.544 38.1489 8.544C38.2236 8.544 38.3263 8.52533 38.4569 8.488C38.5689 8.44133 38.6763 8.418 38.7789 8.418ZM48.0231 6.262C48.0231 7.00867 47.8551 7.68067 47.5191 8.278C47.1831 8.866 46.7211 9.32333 46.1331 9.65C45.5544 9.97667 44.9151 10.14 44.2151 10.14C43.5057 10.14 42.8617 9.97667 42.2831 9.65C41.7044 9.32333 41.2471 8.866 40.9111 8.278C40.5751 7.68067 40.4071 7.00867 40.4071 6.262C40.4071 5.51533 40.5751 4.848 40.9111 4.26C41.2471 3.66267 41.7044 3.20067 42.2831 2.874C42.8617 2.538 43.5057 2.37 44.2151 2.37C44.9151 2.37 45.5544 2.538 46.1331 2.874C46.7211 3.20067 47.1831 3.66267 47.5191 4.26C47.8551 4.848 48.0231 5.51533 48.0231 6.262ZM46.3431 6.262C46.3431 5.80467 46.2451 5.39867 46.0491 5.044C45.8624 4.68 45.6057 4.4 45.2791 4.204C44.9617 4.008 44.6071 3.91 44.2151 3.91C43.8231 3.91 43.4637 4.008 43.1371 4.204C42.8197 4.4 42.5631 4.68 42.3671 5.044C42.1804 5.39867 42.0871 5.80467 42.0871 6.262C42.0871 6.71933 42.1804 7.12533 42.3671 7.48C42.5631 7.83467 42.8197 8.11 43.1371 8.306C43.4637 8.502 43.8231 8.6 44.2151 8.6C44.6071 8.6 44.9617 8.502 45.2791 8.306C45.6057 8.11 45.8624 7.83467 46.0491 7.48C46.2451 7.12533 46.3431 6.71933 46.3431 6.262ZM53.3187 2.37C53.5987 2.37 53.832 2.44933 54.0187 2.608C54.2147 2.76667 54.3127 2.95333 54.3127 3.168C54.3127 3.45733 54.238 3.67667 54.0887 3.826C53.9394 3.966 53.762 4.036 53.5567 4.036C53.4167 4.036 53.258 4.00333 53.0807 3.938C53.0527 3.92867 52.9874 3.91 52.8847 3.882C52.7914 3.854 52.6887 3.84 52.5767 3.84C52.334 3.84 52.1007 3.91467 51.8767 4.064C51.6527 4.21333 51.466 4.442 51.3167 4.75C51.1767 5.04867 51.1067 5.408 51.1067 5.828V9.146C51.1067 9.38867 51.0274 9.594 50.8687 9.762C50.71 9.92067 50.5094 10 50.2667 10C50.024 10 49.8234 9.92067 49.6647 9.762C49.506 9.594 49.4267 9.38867 49.4267 9.146V3.364C49.4267 3.12133 49.506 2.92067 49.6647 2.762C49.8234 2.594 50.024 2.51 50.2667 2.51C50.5094 2.51 50.71 2.594 50.8687 2.762C51.0274 2.92067 51.1067 3.12133 51.1067 3.364V3.546C51.3214 3.16333 51.6294 2.874 52.0307 2.678C52.432 2.47267 52.8614 2.37 53.3187 2.37Z"
+                      fill="#ED7839" />
+                  </svg>
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.6603 7.33594C20.8426 7.51823 20.9337 7.73958 20.9337 8C20.9337 8.26042 20.8426 8.48177 20.6603 8.66406L9.09778 20.2266C8.91549 20.4089 8.69413 20.5 8.43372 20.5C8.1733 20.5 7.95194 20.4089 7.76965 20.2266L1.20715 13.6641C1.02486 13.4818 0.933716 13.2604 0.933716 13C0.933716 12.7396 1.02486 12.5182 1.20715 12.3359L2.76965 10.7734C2.95194 10.5911 3.1733 10.5 3.43372 10.5C3.69413 10.5 3.91549 10.5911 4.09778 10.7734L8.43372 15.1484L17.8087 5.77344C17.965 5.59115 18.1733 5.5 18.4337 5.5C18.6941 5.5 18.9155 5.59115 19.0978 5.77344L20.6603 7.33594ZM8.00403 11.4766L3.62903 7.10156C3.31653 6.78906 3.31653 6.48958 3.62903 6.20312L5.38684 4.44531C5.51705 4.3151 5.66028 4.25 5.81653 4.25C5.99882 4.25 6.15507 4.3151 6.28528 4.44531L8.43372 6.59375L14.3712 0.695312C14.4754 0.565104 14.6056 0.5 14.7618 0.5C14.9441 0.5 15.1004 0.565104 15.2306 0.695312L16.9884 2.45312C17.3009 2.73958 17.3009 3.03906 16.9884 3.35156L8.8634 11.4766C8.75924 11.6068 8.61601 11.6719 8.43372 11.6719C8.25142 11.6719 8.10819 11.6068 8.00403 11.4766Z"
+                      fill="#ED7839" />
+                  </svg>
+                </div>
+              </div>
+              <p class="body-discussao comments-container">
+                Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão e impacto de
+                processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da
+                análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+              </p>
+              <p class="body-discussao comments-container">
+                Situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da
+                dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+              </p>
+            </div>
+            <div class="border-bottom card-padding bg-autor-coautor">
+              <div class="d-flex justify-content-between">
+                <span class="name-discussao">Ana Carolina</span>
+                <div>
+                  <svg class="icon-topico" width="55" height="11" viewBox="0 0 55 11" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.98724 0.676C8.27657 0.825333 8.42124 1.06333 8.42124 1.39C8.42124 1.586 8.35124 1.77733 8.21124 1.964C8.0619 2.16 7.87057 2.258 7.63724 2.258C7.47857 2.258 7.3199 2.216 7.16124 2.132C6.7039 1.91733 6.20924 1.81 5.67724 1.81C5.0239 1.81 4.45457 1.95 3.96924 2.23C3.4839 2.50067 3.11057 2.888 2.84924 3.392C2.5879 3.88667 2.45724 4.456 2.45724 5.1C2.45724 6.20133 2.75124 7.03667 3.33924 7.606C3.93657 8.17533 4.7159 8.46 5.67724 8.46C6.24657 8.46 6.74124 8.35267 7.16124 8.138C7.32924 8.06333 7.47857 8.026 7.60924 8.026C7.8519 8.026 8.05724 8.12867 8.22524 8.334C8.36524 8.51133 8.43524 8.70267 8.43524 8.908C8.43524 9.05733 8.3979 9.19267 8.32324 9.314C8.24857 9.43533 8.14124 9.52867 8.00124 9.594C7.27324 9.958 6.49857 10.14 5.67724 10.14C4.76257 10.14 3.92257 9.94867 3.15724 9.566C2.3919 9.174 1.78057 8.6 1.32324 7.844C0.865903 7.088 0.637236 6.17333 0.637236 5.1C0.637236 4.148 0.851903 3.294 1.28124 2.538C1.7199 1.782 2.3219 1.194 3.08724 0.773999C3.85257 0.344666 4.7159 0.129999 5.67724 0.129999C6.5079 0.129999 7.2779 0.312 7.98724 0.676ZM16.9606 6.262C16.9606 7.00867 16.7926 7.68067 16.4566 8.278C16.1206 8.866 15.6586 9.32333 15.0706 9.65C14.4919 9.97667 13.8526 10.14 13.1526 10.14C12.4432 10.14 11.7992 9.97667 11.2206 9.65C10.6419 9.32333 10.1846 8.866 9.84858 8.278C9.51258 7.68067 9.34458 7.00867 9.34458 6.262C9.34458 5.51533 9.51258 4.848 9.84858 4.26C10.1846 3.66267 10.6419 3.20067 11.2206 2.874C11.7992 2.538 12.4432 2.37 13.1526 2.37C13.8526 2.37 14.4919 2.538 15.0706 2.874C15.6586 3.20067 16.1206 3.66267 16.4566 4.26C16.7926 4.848 16.9606 5.51533 16.9606 6.262ZM15.2806 6.262C15.2806 5.80467 15.1826 5.39867 14.9866 5.044C14.7999 4.68 14.5432 4.4 14.2166 4.204C13.8992 4.008 13.5446 3.91 13.1526 3.91C12.7606 3.91 12.4012 4.008 12.0746 4.204C11.7572 4.4 11.5006 4.68 11.3046 5.044C11.1179 5.39867 11.0246 5.80467 11.0246 6.262C11.0246 6.71933 11.1179 7.12533 11.3046 7.48C11.5006 7.83467 11.7572 8.11 12.0746 8.306C12.4012 8.502 12.7606 8.6 13.1526 8.6C13.5446 8.6 13.8992 8.502 14.2166 8.306C14.5432 8.11 14.7999 7.83467 14.9866 7.48C15.1826 7.12533 15.2806 6.71933 15.2806 6.262ZM24.4262 2.37C24.6689 2.37 24.8695 2.44933 25.0282 2.608C25.1869 2.76667 25.2662 2.972 25.2662 3.224V9.146C25.2662 9.38867 25.1869 9.594 25.0282 9.762C24.8695 9.92067 24.6689 10 24.4262 10C24.1835 10 23.9829 9.92067 23.8242 9.762C23.6749 9.60333 23.5955 9.40267 23.5862 9.16C23.3529 9.43067 23.0355 9.664 22.6342 9.86C22.2422 10.0467 21.8269 10.14 21.3882 10.14C20.7442 10.14 20.1609 9.97667 19.6382 9.65C19.1155 9.314 18.7002 8.852 18.3922 8.264C18.0935 7.676 17.9442 7.00867 17.9442 6.262C17.9442 5.51533 18.0935 4.848 18.3922 4.26C18.6909 3.66267 19.0969 3.20067 19.6102 2.874C20.1329 2.538 20.7069 2.37 21.3322 2.37C21.7802 2.37 22.2002 2.454 22.5922 2.622C22.9842 2.78067 23.3155 2.986 23.5862 3.238V3.224C23.5862 2.98133 23.6655 2.78067 23.8242 2.622C23.9829 2.454 24.1835 2.37 24.4262 2.37ZM21.5982 8.6C22.2049 8.6 22.6995 8.38067 23.0822 7.942C23.4649 7.494 23.6562 6.934 23.6562 6.262C23.6562 5.59 23.4649 5.03 23.0822 4.582C22.6995 4.134 22.2049 3.91 21.5982 3.91C21.0009 3.91 20.5109 4.134 20.1282 4.582C19.7455 5.03 19.5542 5.59 19.5542 6.262C19.5542 6.934 19.7409 7.494 20.1142 7.942C20.4969 8.38067 20.9915 8.6 21.5982 8.6ZM32.5081 2.51C32.7508 2.51 32.9515 2.594 33.1101 2.762C33.2688 2.92067 33.3481 3.12133 33.3481 3.364V6.92C33.3481 7.928 33.0681 8.71667 32.5081 9.286C31.9575 9.85533 31.1688 10.14 30.1421 10.14C29.1155 10.14 28.3268 9.85533 27.7761 9.286C27.2255 8.71667 26.9501 7.928 26.9501 6.92V3.364C26.9501 3.12133 27.0295 2.92067 27.1881 2.762C27.3468 2.594 27.5475 2.51 27.7901 2.51C28.0328 2.51 28.2335 2.594 28.3921 2.762C28.5508 2.92067 28.6301 3.12133 28.6301 3.364V6.92C28.6301 7.48933 28.7561 7.914 29.0081 8.194C29.2601 8.46467 29.6381 8.6 30.1421 8.6C30.6555 8.6 31.0381 8.46467 31.2901 8.194C31.5421 7.914 31.6681 7.48933 31.6681 6.92V3.364C31.6681 3.12133 31.7475 2.92067 31.9061 2.762C32.0648 2.594 32.2655 2.51 32.5081 2.51ZM38.7789 8.418C38.9096 8.418 39.0263 8.48333 39.1289 8.614C39.2409 8.73533 39.2969 8.89867 39.2969 9.104C39.2969 9.356 39.1569 9.57067 38.8769 9.748C38.6063 9.916 38.2983 10 37.9529 10C37.3743 10 36.8843 9.87867 36.4829 9.636C36.0909 9.384 35.8949 8.85667 35.8949 8.054V4.19H35.2509C35.0269 4.19 34.8403 4.11533 34.6909 3.966C34.5416 3.81667 34.4669 3.63 34.4669 3.406C34.4669 3.19133 34.5416 3.014 34.6909 2.874C34.8403 2.72467 35.0269 2.65 35.2509 2.65H35.8949V1.754C35.8949 1.51133 35.9743 1.31067 36.1329 1.152C36.3009 0.984 36.5063 0.899999 36.7489 0.899999C36.9823 0.899999 37.1783 0.984 37.3369 1.152C37.4956 1.31067 37.5749 1.51133 37.5749 1.754V2.65H38.5689C38.7929 2.65 38.9796 2.72467 39.1289 2.874C39.2783 3.02333 39.3529 3.21 39.3529 3.434C39.3529 3.64867 39.2783 3.83067 39.1289 3.98C38.9796 4.12 38.7929 4.19 38.5689 4.19H37.5749V7.984C37.5749 8.18 37.6263 8.32467 37.7289 8.418C37.8316 8.502 37.9716 8.544 38.1489 8.544C38.2236 8.544 38.3263 8.52533 38.4569 8.488C38.5689 8.44133 38.6763 8.418 38.7789 8.418ZM48.0231 6.262C48.0231 7.00867 47.8551 7.68067 47.5191 8.278C47.1831 8.866 46.7211 9.32333 46.1331 9.65C45.5544 9.97667 44.9151 10.14 44.2151 10.14C43.5057 10.14 42.8617 9.97667 42.2831 9.65C41.7044 9.32333 41.2471 8.866 40.9111 8.278C40.5751 7.68067 40.4071 7.00867 40.4071 6.262C40.4071 5.51533 40.5751 4.848 40.9111 4.26C41.2471 3.66267 41.7044 3.20067 42.2831 2.874C42.8617 2.538 43.5057 2.37 44.2151 2.37C44.9151 2.37 45.5544 2.538 46.1331 2.874C46.7211 3.20067 47.1831 3.66267 47.5191 4.26C47.8551 4.848 48.0231 5.51533 48.0231 6.262ZM46.3431 6.262C46.3431 5.80467 46.2451 5.39867 46.0491 5.044C45.8624 4.68 45.6057 4.4 45.2791 4.204C44.9617 4.008 44.6071 3.91 44.2151 3.91C43.8231 3.91 43.4637 4.008 43.1371 4.204C42.8197 4.4 42.5631 4.68 42.3671 5.044C42.1804 5.39867 42.0871 5.80467 42.0871 6.262C42.0871 6.71933 42.1804 7.12533 42.3671 7.48C42.5631 7.83467 42.8197 8.11 43.1371 8.306C43.4637 8.502 43.8231 8.6 44.2151 8.6C44.6071 8.6 44.9617 8.502 45.2791 8.306C45.6057 8.11 45.8624 7.83467 46.0491 7.48C46.2451 7.12533 46.3431 6.71933 46.3431 6.262ZM53.3187 2.37C53.5987 2.37 53.832 2.44933 54.0187 2.608C54.2147 2.76667 54.3127 2.95333 54.3127 3.168C54.3127 3.45733 54.238 3.67667 54.0887 3.826C53.9394 3.966 53.762 4.036 53.5567 4.036C53.4167 4.036 53.258 4.00333 53.0807 3.938C53.0527 3.92867 52.9874 3.91 52.8847 3.882C52.7914 3.854 52.6887 3.84 52.5767 3.84C52.334 3.84 52.1007 3.91467 51.8767 4.064C51.6527 4.21333 51.466 4.442 51.3167 4.75C51.1767 5.04867 51.1067 5.408 51.1067 5.828V9.146C51.1067 9.38867 51.0274 9.594 50.8687 9.762C50.71 9.92067 50.5094 10 50.2667 10C50.024 10 49.8234 9.92067 49.6647 9.762C49.506 9.594 49.4267 9.38867 49.4267 9.146V3.364C49.4267 3.12133 49.506 2.92067 49.6647 2.762C49.8234 2.594 50.024 2.51 50.2667 2.51C50.5094 2.51 50.71 2.594 50.8687 2.762C51.0274 2.92067 51.1067 3.12133 51.1067 3.364V3.546C51.3214 3.16333 51.6294 2.874 52.0307 2.678C52.432 2.47267 52.8614 2.37 53.3187 2.37Z"
+                      fill="#ED7839" />
+                  </svg>
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.6603 7.33594C20.8426 7.51823 20.9337 7.73958 20.9337 8C20.9337 8.26042 20.8426 8.48177 20.6603 8.66406L9.09778 20.2266C8.91549 20.4089 8.69413 20.5 8.43372 20.5C8.1733 20.5 7.95194 20.4089 7.76965 20.2266L1.20715 13.6641C1.02486 13.4818 0.933716 13.2604 0.933716 13C0.933716 12.7396 1.02486 12.5182 1.20715 12.3359L2.76965 10.7734C2.95194 10.5911 3.1733 10.5 3.43372 10.5C3.69413 10.5 3.91549 10.5911 4.09778 10.7734L8.43372 15.1484L17.8087 5.77344C17.965 5.59115 18.1733 5.5 18.4337 5.5C18.6941 5.5 18.9155 5.59115 19.0978 5.77344L20.6603 7.33594ZM8.00403 11.4766L3.62903 7.10156C3.31653 6.78906 3.31653 6.48958 3.62903 6.20312L5.38684 4.44531C5.51705 4.3151 5.66028 4.25 5.81653 4.25C5.99882 4.25 6.15507 4.3151 6.28528 4.44531L8.43372 6.59375L14.3712 0.695312C14.4754 0.565104 14.6056 0.5 14.7618 0.5C14.9441 0.5 15.1004 0.565104 15.2306 0.695312L16.9884 2.45312C17.3009 2.73958 17.3009 3.03906 16.9884 3.35156L8.8634 11.4766C8.75924 11.6068 8.61601 11.6719 8.43372 11.6719C8.25142 11.6719 8.10819 11.6068 8.00403 11.4766Z"
+                      fill="#ED7839" />
+                  </svg>
+                </div>
+              </div>
+              <p class="body-discussao comments-container">
+                Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo
+                formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise
+                da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </div>
+  <footer class="conteudo container my-4">
+    <div class="border-top d-flex align-items-center">
+      <div class="d-flex flex-column mx-3">
+        <img src="../assets/galoa-logo.svg" alt="Galoa logo" width="200px" height="100px">
+        <a class="btn btn-footer justify-content-center">Saiba Mais</a>
+      </div>
+      <div class="p-footer">
+        <p>
+          <strong>Presevar a memória do evento e ampliar o acesso ao conhecimento científico</strong> gerado em eventos
+          é a razão de ser da plataforma Galoá Proceedings.
+        </p>
+        <p class="my-1">
+          Os trabalhos publicados aqui têm maior alcance e ficam disponíveis para toda a comunidade científica, mantendo
+          acesso o debate científico formentado pelos encontros e aumentando o impacto do evento.
+        </p>
+      </div>
+    </div>
+  </footer>
+</main>
