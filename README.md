@@ -2,7 +2,7 @@
 
 Olá! Este repositório contém os exercícios de desenvolvimento da Chuva, você **deve** implementar pelo menos uma das tecnologias disponíveis, conforme sua preferência pessoal e aptidão.
 
-Só serão considerados para correção testes em que as verificações do Github Actions estejam passando (verdinhas).
+Só serão considerados para correção testes em que as verificações do Github Actions estejam passando (verdinhas)..
 
 
 # Tecnologias
